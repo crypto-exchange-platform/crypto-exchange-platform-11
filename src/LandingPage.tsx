@@ -9,6 +9,8 @@ import { mockData } from "./utils/coinHelpers";
 import TradeSection from "./TradeSection";
 
 import PortfolioSection, { Holding } from "./PortfolioSection";
+import Footer from "./Footer";
+import ForexNewsSection from "./ForexSection";
 
 declare global {
   interface Window {
@@ -39,7 +41,6 @@ const LandingPage: FC = () => {
     };
   }, []);
 
-  // src/components/PortfolioSection.tsx (or wherever you define mockHoldings)
 
 const mockHoldings: Holding[] = [
   {
@@ -119,6 +120,8 @@ const mockHoldings: Holding[] = [
       />
       <TradeSection />
       <PortfolioSection holdings={mockHoldings} />
+      <ForexNewsSection/>
+      <Footer/>
     </>
   );
 };

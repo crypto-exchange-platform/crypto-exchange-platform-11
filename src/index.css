@@ -63,3 +63,19 @@ html {
     0 0 16px rgba(6,182,212,0.6);
 }
  
+
+@import "tailwindcss";
+
+.footer {
+  background-color: #0a0a0a;
+  color: #ccc;
+}
+
+.footer a {
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.footer a:hover {
+  color: #06b6d4;
+  text-shadow: 0 0 8px rgba(6,182,212,0.6);
+}
+ 
