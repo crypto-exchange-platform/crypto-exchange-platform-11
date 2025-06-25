@@ -1,0 +1,15 @@
+
+@import "tailwindcss";
+
+:root {
+  --font-primary: 'Orbitron', sans-serif;
+  color-scheme: light dark;
+  
+}
+
+
+ html {
+  scroll-behavior: smooth;
+    font-family: var(--font-primary);
+
+}
