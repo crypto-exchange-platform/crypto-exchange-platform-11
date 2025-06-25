@@ -1,15 +1,65 @@
-
 @import "tailwindcss";
 
 :root {
   --font-primary: 'Orbitron', sans-serif;
   color-scheme: light dark;
-  
 }
 
-
- html {
+html {
+  font-family: var(--font-primary);
   scroll-behavior: smooth;
-    font-family: var(--font-primary);
-
 }
+
+
+@keyframes moveGrid {
+  from { background-position: 0 0; }
+  to   { background-position: 30px 30px; }
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55%                         { opacity: 0.4; }
+}
+
+
+.bg-dark-squares {
+  position: relative;
+  background-color: #0a0a0a;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.05) 0 1px,
+      transparent 1px 30px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.05) 0 1px,
+      transparent 1px 30px
+    );
+  background-size: 30px 30px;
+  animation: moveGrid 20s linear infinite;
+}
+
+.flicker {
+  animation: flicker 3s infinite;
+}
+
+.card-anim {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-anim:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 16px rgba(165,205,212,0.6),
+    0 0 32px rgba(46,135,151,0.4);
+}
+
+.glow-button {
+  transition: box-shadow 0.3s ease;
+}
+.glow-button:hover {
+  box-shadow:
+    0 0 8px rgba(6,182,212,0.8),
+    0 0 16px rgba(6,182,212,0.6);
+}
+ 
