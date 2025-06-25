@@ -1,12 +1,6 @@
-import  { FC, useEffect } from 'react';
-import 'particles.js'; 
-import { footerParticlesConfig } from './utils/footerParticlesConfig';
+import  { FC } from 'react';
 const Footer: FC = () => {
-  useEffect(() => {
-    if (window.particlesJS) {
-      window.particlesJS('footer-particles', footerParticlesConfig);
-    }
-  }, []);
+ 
 
   return (
     <footer className="relative footer overflow-hidden pt-20 pb-12 text-gray-400">
