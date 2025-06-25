@@ -6,6 +6,7 @@ import { LoginModal } from "./LoginModal";
 import { HeroSection } from "./HeroSection";
 import { FuturisticMarketSection } from "./MarketSection";
 import { mockData } from "./utils/coinHelpers";
+import TradeSection from "./TradeSection";
 
 
 
@@ -64,7 +65,7 @@ const LandingPage: FC = () => {
   coins={mockData.slice(0, 8)}
   onViewAll={() => scrollToSection('all-markets')}
 />
- 
+ <TradeSection/>
     </>
   );
 };
